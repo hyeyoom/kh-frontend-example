@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바스크립트</title>
+    </head>
+    <body>
+        <button id="btn-alert">click</button>
+        <script>
+            // dom에서 btn-alert라는 id의 dom을 찾음.
+            var btn = document.getElementById('btn-alert');
+            console.log(btn);
+
+            btn.addEventListener('click', onClickHandler);
+            function onClickHandler() {
+                alert('마우스 클릭!!');
+            }
+        </script>
+    </body>
+</html>

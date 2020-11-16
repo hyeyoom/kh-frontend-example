@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>브라우저 제어하기</title>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: cornflowerblue;
+                cursor: pointer;
+            }
+
+            p {
+                background-color: crimson;
+                cursor: pointer;
+            }
+
+            span {
+                background-color: darkgoldenrod;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d">
+            <p id="p">
+                <span id="s">내용</span>같은거
+            </p>
+        </div>
+        <script>
+            const d = document.getElementById('d')
+            const p = document.getElementById('p')
+            const s = document.getElementById('s')
+
+            d.addEventListener('click', e => {
+                console.log('div 누름')
+            })
+
+            p.addEventListener('click', e => {
+                console.log('paragraph 누름')
+            })
+
+            s.addEventListener('click', e => {
+                console.log('span 누름')
+            })
+        </script>
+    </body>
+</html>
