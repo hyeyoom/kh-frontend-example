@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>dd</title>
+        <style>
+            .terms-box input {
+                display: block;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                visibility: hidden;
+                position: absolute;
+            }
+
+            .terms-box label {
+                padding-left: 1.5rem;
+                position: relative;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .terms-box label::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                border-radius: 100%;
+                border: 1px solid #cccccc;
+                background-color: #f1f1f1;
+            }
+
+            .terms-box input:checked ~ label::before {
+                background-color: #0078ff;
+                border-color: #0078ff;
+            }            
+
+            .terms-box label::after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 6px;
+                height: 3px;
+                border-left: 1px solid white;
+                border-bottom: 1px solid white;
+                top: 7px;
+                left: 7px;
+                transform: rotate(-45deg);
+                visibility: hidden;
+            }
+
+            .terms-box input:checked ~ label::after {
+                visibility: visible;
+            }
+        </style>
+        <script>
+            function handleOnload() {
+                const all = document.getElementById('all-dong-eui')
+            all.addEventListener('click', () => {
+                const checks = document.querySelectorAll('.terms-agreement')
+                for (item of checks) {
+                    item.checked = true
+                }
+            })
+        }
+        </script>
+    </head>
+    <body onload="handleOnload()">
+        <div class="terms-box">
+            <div>
+                <input id="all-dong-eui" type="checkbox" class="terms-agreement"/>
+                <label for="all-dong-eui" >약관 전체 동의</label>
+            </div>
+            <div>
+                <input id="privacy" type="checkbox" class="terms-agreement"/>
+                <label for="privacy">개인정보 수집 이용 동의</label>
+            </div>
+            <div>
+                <input id="marketing" type="checkbox" class="terms-agreement"/>
+                <label for="marketing">마케팅 스팸 문자 받는거 동의?</label>
+            </div>
+            <div>
+                <input id="no-kids-zone" type="checkbox" class="terms-agreement"/>
+                <label for="no-kids-zone" >만 14세 미만 가입 제한</label>
+            </div>
+        </div>
+    </body>
+</html>

@@ -36,10 +36,12 @@
             })
 
             p.addEventListener('click', e => {
+                e.stopPropagation()
                 console.log('paragraph 누름')
             })
 
             s.addEventListener('click', e => {
+                e.stopPropagation()
                 console.log('span 누름')
             })
         </script>

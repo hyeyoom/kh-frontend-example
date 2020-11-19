@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>layout tutorial</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <style>
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            html, body {
+                margin: 0;
+                font-family: 'Noto Sans JP', sans-serif;
+                line-height: 1.6;
+            }
+
+            .hero {
+                background-image: 
+                    url('https://raw.githubusercontent.com/hyeyoom/kh-lecture-2020/master/layout/img/bg.jpeg'),
+                    radial-gradient(#ccc, #111);
+                background-blend-mode: multiply;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-position: center center;
+                height: 100vh;                
+                color: white;
+                padding-top: 35rem
+            }
+
+            h1, p, blockquote {
+                margin: 0;
+            }
+
+            .container {
+                width: 85%;
+                max-width: 65em;
+                margin: 0 auto
+            }
+
+            .primary-title {
+                font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+            }
+
+            .article-spacing {
+                margin-top: 5rem;
+                width: 40%;
+            }
+
+            .article-spacing > h1 {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .article-spacing > p, blockquote {
+                font-size: 1.3rem;
+                text-indent: 1rem;
+                margin-bottom: 2.4rem;
+            }
+
+            .article-spacing > blockquote {
+                padding-left: 1rem;
+                border-left: 5px solid black;
+                background-color: #f5f5f5;
+            }
+
+            .article-spacing > p:hover {
+                background-color: #f5f5f5;
+                cursor: pointer;
+            }
+
+            .image-box {
+                margin-bottom: 1.2rem;
+                text-align: center;
+            }
+
+            .image-box > p {
+                color: #555555;
+            }
+
+            .image-box > img {
+                filter: brightness(90%);
+                width: 100%;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .image-box > img:hover {
+                filter: none;
+                cursor: pointer;
+            }
+
+            footer {
+                background-color: rgba(0, 0, 0, 0.9);
+            }
+
+            .info-container {
+                display: flex;
+            }
+
+            .info-container-item {
+                flex: 1 1 0;
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            .item1 { background-color: coral; }
+            .item2 { background-color: cornflowerblue; }
+            .item3 { background-color: darkmagenta; }
+        </style>
+    </head>
+
+    <body>
+        <header class="hero">
+            <div class="container">
+                <h1 class="primary-title">제목같은거 여기에</h1>
+                <p>서브타이틀</p>
+                <p>Mon Nov 16 2020 14:03:54 GMT+0900 </p>
+            </div>
+        </header>
+        <main>
+            <article>
+                <div class="container article-spacing">
+                    <h1>👀제목1</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar velit id sem porttitor pellentesque. Donec venenatis sit amet massa sed aliquet. Phasellus convallis, metus eu scelerisque placerat, massa sapien eleifend diam, sollicitudin faucibus nisi leo sit amet neque. Praesent ac risus nec nulla tristique bibendum. Vestibulum non vehicula enim. Aenean cursus augue vitae nisi cursus viverra. Ut ut lacus tincidunt, tincidunt augue a, laoreet velit. Nam egestas auctor erat in malesuada. Nulla nec ipsum interdum, luctus lorem id, blandit neque. Praesent congue semper ante. Vestibulum tortor ex, euismod vel dolor a, porttitor consectetur orci. Nunc euismod dictum aliquet. Aenean et posuere odio.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar velit id sem porttitor pellentesque. Donec venenatis sit amet massa sed aliquet. Phasellus convallis, metus eu scelerisque placerat, massa sapien eleifend diam, sollicitudin faucibus nisi leo sit amet neque. Praesent ac risus nec nulla tristique bibendum. Vestibulum non vehicula enim. Aenean cursus augue vitae nisi cursus viverra. Ut ut lacus tincidunt, tincidunt augue a, laoreet velit. Nam egestas auctor erat in malesuada. Nulla nec ipsum interdum, luctus lorem id, blandit neque. Praesent congue semper ante. Vestibulum tortor ex, euismod vel dolor a, porttitor consectetur orci. Nunc euismod dictum aliquet. Aenean et posuere odio.</p>
+                    <blockquote>
+                        <p>인용구</p>
+                        <p>인용구다</p>
+                    </blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pulvinar velit id sem porttitor pellentesque. Donec venenatis sit amet massa sed aliquet. Phasellus convallis, metus eu scelerisque placerat, massa sapien eleifend diam, sollicitudin faucibus nisi leo sit amet neque. Praesent ac risus nec nulla tristique bibendum. Vestibulum non vehicula enim. Aenean cursus augue vitae nisi cursus viverra. Ut ut lacus tincidunt, tincidunt augue a, laoreet velit. Nam egestas auctor erat in malesuada. Nulla nec ipsum interdum, luctus lorem id, blandit neque. Praesent congue semper ante. Vestibulum tortor ex, euismod vel dolor a, porttitor consectetur orci. Nunc euismod dictum aliquet. Aenean et posuere odio.</p>
+                    <h1>😜제목2</h1>
+                    <p>밤이 같이 풀이 언덕 별 하나에 별빛이 시인의 가난한 봅니다. 하나에 이국 동경과 가득 파란 오는 많은 듯합니다. 흙으로 다 하나 듯합니다. 이런 오면 별 우는 없이 하나에 별 비둘기, 버리었습니다. 이웃 나는 아스라히 이런 내일 하늘에는 풀이 못 버리었습니다. 나는 하나의 어머니, 하나에 이름을 걱정도 동경과 많은 당신은 봅니다. 이 노새, 내린 슬퍼하는 된 벌레는 거외다. 별이 다 이름과, 까닭입니다. 이웃 옥 그리고 버리었습니다.</p>
+                    <div class="image-box">
+                        <img src="https://i.guim.co.uk/img/media/684c9d087dab923db1ce4057903f03293b07deac/205_132_1915_1150/master/1915.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=14a95b5026c1567b823629ba35c40aa0"/>
+                        <p>[이미지 설명]</p>
+                    </div>
+                    <p>밤이 같이 풀이 언덕 별 하나에 별빛이 시인의 가난한 봅니다. 하나에 이국 동경과 가득 파란 오는 많은 듯합니다. 흙으로 다 하나 듯합니다. 이런 오면 별 우는 없이 하나에 별 비둘기, 버리었습니다. 이웃 나는 아스라히 이런 내일 하늘에는 풀이 못 버리었습니다. 나는 하나의 어머니, 하나에 이름을 걱정도 동경과 많은 당신은 봅니다. 이 노새, 내린 슬퍼하는 된 벌레는 거외다. 별이 다 이름과, 까닭입니다. 이웃 옥 그리고 버리었습니다.</p>
+                    <p>밤이 같이 풀이 언덕 별 하나에 별빛이 시인의 가난한 봅니다. 하나에 이국 동경과 가득 파란 오는 많은 듯합니다. 흙으로 다 하나 듯합니다. 이런 오면 별 우는 없이 하나에 별 비둘기, 버리었습니다. 이웃 나는 아스라히 이런 내일 하늘에는 풀이 못 버리었습니다. 나는 하나의 어머니, 하나에 이름을 걱정도 동경과 많은 당신은 봅니다. 이 노새, 내린 슬퍼하는 된 벌레는 거외다. 별이 다 이름과, 까닭입니다. 이웃 옥 그리고 버리었습니다.</p>
+                    <p>밤이 같이 풀이 언덕 별 하나에 별빛이 시인의 가난한 봅니다. 하나에 이국 동경과 가득 파란 오는 많은 듯합니다. 흙으로 다 하나 듯합니다. 이런 오면 별 우는 없이 하나에 별 비둘기, 버리었습니다. 이웃 나는 아스라히 이런 내일 하늘에는 풀이 못 버리었습니다. 나는 하나의 어머니, 하나에 이름을 걱정도 동경과 많은 당신은 봅니다. 이 노새, 내린 슬퍼하는 된 벌레는 거외다. 별이 다 이름과, 까닭입니다. 이웃 옥 그리고 버리었습니다.</p>
+                    <p>밤이 같이 풀이 언덕 별 하나에 별빛이 시인의 가난한 봅니다. 하나에 이국 동경과 가득 파란 오는 많은 듯합니다. 흙으로 다 하나 듯합니다. 이런 오면 별 우는 없이 하나에 별 비둘기, 버리었습니다. 이웃 나는 아스라히 이런 내일 하늘에는 풀이 못 버리었습니다. 나는 하나의 어머니, 하나에 이름을 걱정도 동경과 많은 당신은 봅니다. 이 노새, 내린 슬퍼하는 된 벌레는 거외다. 별이 다 이름과, 까닭입니다. 이웃 옥 그리고 버리었습니다.</p>
+                </div>
+            </article>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="container info-container">
+                    <div class="info-container-item item1">
+                        <h1>제목1</h1>
+                        <p>내용1</p>
+                    </div>
+                    <div class="info-container-item item2">
+                        <h1>제목2</h1>
+                        <p>내용2</p>
+                    </div>
+                    <div class="info-container-item item3">
+                        <h1>제목3</h1>
+                        <p>내용3</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -160,3 +160,11 @@ addEventListener('이벤트이름', '이벤트핸들러')
 </script>
 ```
 
+## 3.3. 이벤트 전파
+
+- event capturing phase (위 -> 아래)
+- Event Target
+- event bubbling phase (하위 -> 상위)
+  - 이 때 등록된 핸들러들 호출됨
+  - 상위에 있는 요소들에 등록된 핸들러가 호출 될 수 있으므로 의도하지 않은 동작을 막으려면 stopPropagation 호출해서 이벤트 전파 막아야함.
+
